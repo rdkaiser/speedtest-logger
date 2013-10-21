@@ -13,11 +13,12 @@ if [ $UID == 0 ]; then
     
     # Our file exists in the system-wide log directory,
     # to which only root can write by default. Applying 
-    # the sticky bit operator [chmod +t] allows all us to
-    # give write access to everyone while still preventing
-    # its deletion by anyone other than its creator (root)
-    # wile still preventing its complete deletion and
-    # therefore deconfiguring speedtest-logger
+    # the sticky bit operator [chmod +t] allows logging
+    # of invoncatinos by all users, regardless of admin
+    # status, while still preventing its deletion (and 
+    # therefore causing the the deconfiguration of 
+    # speedtest-logger in its original context) by anyone
+    # other than its creator (root).
     
     # give write access and apply the stick bit       
     chmod gu+rwt /var/log/speedtest-cli.log
