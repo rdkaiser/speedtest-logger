@@ -12,3 +12,4 @@ Dependencies
 ------------
 - [speedtest-cli] (https://github.com/sivel/speedtest-cli.git)
 - python
+- logrotate
