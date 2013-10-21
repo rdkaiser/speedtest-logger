@@ -26,6 +26,9 @@ if [ $UID == 0 ]; then
     cp speedtest-logger.sh /usr/local/bin/speedtest-logger
     chmod +x /usr/local/bin/speedtest-logger
     
+    cp config-speedtest-logger.sh /usr/local/bin/config-speedtest-logger
+    chmod +x  /usr/local/bin/config-speedtest-logger
+    
     echo " /var/log/speedtest-cli.log created with mode 1755          "
     echo " speedtest-logger successfully configured.                  "
     echo " Note that all invocations of speedtest-logger, regardless  "
