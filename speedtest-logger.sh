@@ -1,23 +1,22 @@
 #! /bin/bash
 
 SPEEDTEST_CLI='/usr/local/bin/speedtest-cli'
-fileName='/var/log/speedtest-cli.log'
+filename='/var/log/speedtest-cli.log'
 IPAddress=$(curl -s ifconfig.me)
 HostName=$(host $IPAddress | awk '{print $5}')
 
-# All invocations will be logged in the write-restriced system
-# log directory, regardless of administrative status, provieded
-# that this script is properly configued, i.e. the file exists
-# with mode 1666. 
+# All invocations will be logged in the normally write-restriced
+# system log directory, regardless of administrative status, 
+# provieded that this script is properly configued, i.e. the file 
+# exists with mode 1666. 
 
 if [ -w  $filename ]; then
     
-    echo "Writable"
-    echo $(date) >> $fileName
-    echo $IPAddress >> $fileName
-    echo $HostName >> $fileName
+    echo $(date) >> $filename
+    echo $IPAddress >> $filename
+    echo $HostName >> $filename
     
-    $SPEEDTEST_CLI --simple >> $fileName 
+    $SPEEDTEST_CLI --simple >> $filename 
    
     exit 0
     
