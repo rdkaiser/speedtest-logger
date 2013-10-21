@@ -26,9 +26,6 @@ if [ -w  $filename ]; then
         echo " Try running 'sudo config-speedtest-logger' to reconfigure your system "
         echo " or simply edit the variable 'filename' so that is points somewere to  " 
         echo " which you have write access.                                          "
-        echo " writing to stdout...                                                  "
-        
-        $SPEDTEST_CLI 
-        
+
         exit 1
 fi
