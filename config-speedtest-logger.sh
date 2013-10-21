@@ -30,7 +30,7 @@ if [ $UID == 0 ]; then
     cp config-speedtest-logger.sh /usr/local/bin/config-speedtest-logger
     chmod +x  /usr/local/bin/config-speedtest-logger
     
-    echo " /var/log/speedtest-cli.log created with mode 1755          "
+    echo " /var/log/speedtest-cli.log created with mode 1666          "
     echo " speedtest-logger successfully configured.                  "
     echo " Note that all invocations of speedtest-logger, regardless  "
     echo " regardless of the user's administrative status, will be    "
