@@ -21,10 +21,12 @@ if [ -w  $filename ]; then
     exit 0
     
     else 
-        echo " Either you don't have the proper permissions to run this script or     "
-        echo " it is not properly configured. Please run sudo config-speedtest-logger "
-        echo " to reconfigure or contact your local system administrator.             "
-        echo " writing to stdout..."
+        echo " Either you don't have permission to run this script or your system    "
+        echo " is not properly configured to run this script in its current context. "
+        echo " Try running 'sudo config-speedtest-logger' to reconfigure your system "
+        echo " or simply edit the variable 'filename' so that is points somewere to  " 
+        echo " which you have write access.                                          "
+        echo " writing to stdout...                                                  "
         
         $SPEDTEST_CLI 
         
