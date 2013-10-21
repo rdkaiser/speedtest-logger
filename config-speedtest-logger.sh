@@ -16,7 +16,7 @@ if [ $UID == 0 ]; then
     # the sticky bit operator [chmod +t] allows logging
     # of invoncatinos by all users, regardless of admin
     # status, while still preventing its deletion (and 
-    # therefore causing the the deconfiguration of 
+    # therefore causing  the deconfiguration of 
     # speedtest-logger in its original context) by anyone
     # other than its creator (root).
     
